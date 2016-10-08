@@ -5,27 +5,26 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One',
+var articles = {
+    
+    articleOne : {title: 'Article One',
     heading: 'Hello to Article One',
     content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
     
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
     
-    <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`
-};
-
-var articleTwo = {
-    title: 'Article Two',
-    heading: 'Hello to Article Two',
-    content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
+    <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`},
+   
+    articleTwo : { 
+     title: 'Article Two',
+     heading: 'Hello to Article Two',
+     content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
     
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
     
-    <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`
-};
-
-var articleThree = {
+    <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`},
+    
+    articleThree : {
     title: 'Article Three',
     heading: 'Hello to Article Three',
     content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
@@ -33,7 +32,10 @@ var articleThree = {
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
     
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`
-}
+    }
+};
+
+
 
 function createTemplate(data){
     var title=data.title;
