@@ -27,8 +27,9 @@ var htmlTemplate =
  </head>
 
 <body>
-    ${heading}
+    
     <div class="container">
+    ${heading}
     ${content}
     </div>
     <hr />
