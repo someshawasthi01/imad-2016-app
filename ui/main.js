@@ -6,7 +6,7 @@ var element = document.getElementById('main-text');
 element.innerHTML = 'Fucktards!';
 
 //To move the image on being clicked
-var img = document.getElementbyId('madi');
+var img = document.getElementById('madi');
 img.onclick = function(){
     img.style.marginLeft='100px';
 };
