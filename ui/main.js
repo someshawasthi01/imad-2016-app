@@ -3,7 +3,7 @@ console.log('Loaded!');
 //To change the text of the main-text div
 var element = document.getElementById('main-text');
 
-element.innerHTML = 'Somesh Awasthi, CEO , Metoshaw';
+element.innerHTML = 'Somesh Awasthi,CEO,Metoshaw';
 
 //To move the image on being clicked
 var img = document.getElementById('madi');
