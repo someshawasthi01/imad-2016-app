@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles = {
     
-    'articleOne' : {title: 'Article One',
+    'article-one' : {title: 'Article One',
     heading: 'Hello to Article One',
     content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
     
@@ -15,7 +15,7 @@ var articles = {
     
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`},
    
-    'articleTwo' : { 
+    'article-two' : { 
      title: 'Article Two',
      heading: 'Hello to Article Two',
      content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
@@ -24,7 +24,7 @@ var articles = {
     
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`},
     
-    'articleThree' : {
+    'article-three' : {
     title: 'Article Three',
     heading: 'Hello to Article Three',
     content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
@@ -61,18 +61,16 @@ var htmlTemplate =
 
 return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res){
-   res.send(createTemplate(articles[articleOne])); 
+
+app.get('/:articleName',function(req,res){
+    var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName])); 
 });
-app.get('/article-two',function(req,res){
-   res.send(createTemplate(articleTwo)); 
-});
-app.get('/article-three',function(req,res){
-   res.send(createTemplate(articleThree)); 
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
