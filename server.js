@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles = {
     
-    articleOne : {title: 'Article One',
+    'articleOne' : {title: 'Article One',
     heading: 'Hello to Article One',
     content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
     
@@ -15,7 +15,7 @@ var articles = {
     
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`},
    
-    articleTwo : { 
+    'articleTwo' : { 
      title: 'Article Two',
      heading: 'Hello to Article Two',
      content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
@@ -24,7 +24,7 @@ var articles = {
     
     <p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>`},
     
-    articleThree : {
+    'articleThree' : {
     title: 'Article Three',
     heading: 'Hello to Article Three',
     content: `<p>I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?I'm fine how are you?</p>
